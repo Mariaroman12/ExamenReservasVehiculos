@@ -92,40 +92,39 @@ public class Empresa {
 	
 	
 	public List<Vehiculo> listaCoches(int plazas, String tipo) {
-		List<Vehiculo> misV = new ArrayList<>();
+		List<Vehiculo> coches = new ArrayList<>();
 		for (Vehiculo v:misV) {
 			if(v instanceof Coche) {
-				Coche coche = (Coche) v;
-                if (coche.getPlazas() == plazas && coche.getMotor().equals(tipo)) {
-                    misV.add(coche);
+				if( ((Coche) v).getPlazas() >= plazas && ((Coche) v).getTipo().equals(tipo)) {
+					coches.add(v);
 				}
 			}
 		}
-		return misV;
+		return coches;
 	}
 	
 	public List<Vehiculo> listaFurgones(float carga, int plazas) {
-		List<Vehiculo> misV = new ArrayList<>();
+		List<Vehiculo> furgones = new ArrayList<>();
 		for (Vehiculo v:misV) {
 			if(v instanceof Furgon) {
 				if( ((Furgon) v).getPlazas() >= plazas && ((Furgon) v).getCargaMax() >= carga) {
-					misV.add(v);
+					furgones.add(v);
 				}
 			}
 		}
-		return misV;
+		return furgones;
 	}
 	
 	public List<Vehiculo> listaCamiones(float carga, float longi) {
-		List<Vehiculo> misV = new ArrayList<>();
+		List<Vehiculo> camiones = new ArrayList<>();
 		for (Vehiculo v:misV) {
 			if(v instanceof Camion) {
 				if( ((Camion) v).getCargaMax() >= carga && ((Camion) v).getLongi() >= longi) {
-					misV.add(v);
+					camiones.add(v);
 				}
 			}
 		}
-		return misV;
+		return camiones;
 	}
 	
 	

@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Empresa miEmpresa = new Empresa();
-		List<Vehiculo> misV;
+		List<Vehiculo> misV = null;
 		boolean continuar = true;
 
 		System.out.println("Bienvenido al sistema de gestión de vehiculos.");
@@ -96,6 +96,7 @@ public class Main {
 					System.out.println("Introduce el tipo de motor");
 					String motor = sc.nextLine();
 					misV = miEmpresa.listaCoches(plazas, motor);
+					
 
 				} else if (respuesta.compareToIgnoreCase("Furgón") == 0) {
 
@@ -122,7 +123,9 @@ public class Main {
 				if (respuesta.compareTo("") != 0) {
 					System.out.println("Lista de Vehículos");
 					System.out.println("------------------------");
-					System.out.println(misV);
+					for (Vehiculo v : misV) {
+                        System.out.println("Matricula: "+v.getMatricula());
+					}
 				} else {
 					System.out.println("¡Aún no hay ningún vehículo registrado!");
 				}
@@ -327,7 +330,7 @@ public class Main {
 	public static String tipoCoche(Scanner sc) {
 		String tipoCoche;
 		boolean seguir = true;
-		System.out.println("Introduce el tipo de Coche");
+		System.out.println("Introduce el tipo de Vehiculo");
 		System.out.println("Coche / Furgón / Camión");
 		tipoCoche = sc.nextLine();
 		if (tipoCoche.compareToIgnoreCase("Coche") == 0 || tipoCoche.compareToIgnoreCase("Camión") == 0
@@ -337,7 +340,7 @@ public class Main {
 
 		}
 		while (seguir) {
-			System.out.println("Introduce correctamente el tipo de Coche");
+			System.out.println("Introduce correctamente el tipo de Vehiculo");
 			System.out.println("Coche / Furgón / Camión");
 			tipoCoche = sc.nextLine();
 			if (tipoCoche.compareToIgnoreCase("Coche") == 0 || tipoCoche.compareToIgnoreCase("Camión") == 0
