@@ -182,7 +182,7 @@ public class Main {
 		int plazas;
 		int puertas;
 		float volumenM;
-		String tipo;
+		String tipoMaletero;
 
 		System.out.println("Introduce la matrícula");
 		matricula = sc.nextLine();
@@ -207,11 +207,11 @@ public class Main {
 		System.out.println("Introduce el volumen del maletero");
 		respuesta = sc.nextLine();
 		volumenM = Float.valueOf(respuesta);
-		System.out.println("Introduce el tipo");
-		tipo = sc.nextLine();
+		System.out.println("Introduce el tipo de maletero");
+		tipoMaletero = sc.nextLine();
 
 		return new Coche(matricula, modelo, marca, motor, precio, km, plazas, puertas,
-				volumenM, tipo);
+				volumenM, tipoMaletero);
 		}
 
 	public static Furgon crearFurgon(Scanner sc) {

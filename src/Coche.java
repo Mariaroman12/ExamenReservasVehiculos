@@ -4,16 +4,16 @@ public class Coche extends Vehiculo{
 	private int plazas;
 	private int puertas;
 	private float volumenM;
-	private String tipo;
+	private String tipoMaletero;
 	
 
 	public Coche(String matricula, String modelo, String marca, String motor, float precio, float km,
-			int plazas, int puertas, float volumenM, String tipo) {
+			int plazas, int puertas, float volumenM, String tipoMaletero) {
 		super(matricula, modelo, marca, motor, precio, km);
 		this.plazas = plazas;
 		this.puertas = puertas;
 		this.volumenM = volumenM;
-		this.tipo = tipo;
+		this.tipoMaletero = tipoMaletero;
 	}
 
 
@@ -48,12 +48,12 @@ public class Coche extends Vehiculo{
 		this.volumenM = volumenM;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getTipoMaletero() {
+		return tipoMaletero;
 	}
 
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		this.tipoMaletero = tipo;
 	}
 
 

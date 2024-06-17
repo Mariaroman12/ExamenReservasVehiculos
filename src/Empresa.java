@@ -91,11 +91,11 @@ public class Empresa {
 	}
 	
 	
-	public List<Vehiculo> listaCoches(int plazas, String tipo) {
+	public List<Vehiculo> listaCoches(int plazas, String motor) {
 		List<Vehiculo> coches = new ArrayList<>();
 		for (Vehiculo v:misV) {
 			if(v instanceof Coche) {
-				if( ((Coche) v).getPlazas() >= plazas && ((Coche) v).getTipo().equals(tipo)) {
+				if( ((Coche) v).getPlazas() >= plazas && ((Coche) v).getMotor().equals(motor)) {
 					coches.add(v);
 				}
 			}
@@ -176,7 +176,7 @@ public class Empresa {
 				}
 			 }
 		}return false;	
-}*/
+} */
 }
 
 
